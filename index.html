@@ -3,37 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Static Page</title>
+    <title>The World of Computers</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">MyBrand</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
+    <header>
+        <nav class="container">
+            <div class="logo">TechVerse</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#types">Types</a></li>
+                <li><a href="#future">Future</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1>Hello, I'm Alex.</h1>
-            <h2>Creative Web Designer & Developer</h2>
-            <p>Crafting beautiful and functional digital experiences. Let's build something amazing together.</p>
-            <a href="#contact" class="cta-button">Get In Touch</a>
-        </div>
-        <div class="hero-image">
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>The Age of Computation</h1>
+                <p>Exploring the machines that define our world.</p>
+                <a href="#about" class="cta-button">Learn More</a>
             </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2>What is a Computer?</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="icon">💻</div>
+                        <h3>Hardware</h3>
+                        <p>The physical components you can see and touch, from the CPU and motherboard to the keyboard and mouse.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">📄</div>
+                        <h3>Software</h3>
+                        <p>The set of instructions, data, or programs used to operate computers and execute specific tasks.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">🌐</div>
+                        <h3>Networks</h3>
+                        <p>How computers connect, from local networks (LAN) to the vast, global web that links billions of devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="types">
+            <div class="container content-layout">
+                <div class="content-text">
+                    <h2>Types of Computers</h2>
+                    <p>From massive <strong>supercomputers</strong> that perform billions of calculations per second to the <strong>smartphones</strong> in our pockets, computers come in all shapes and sizes.</p>
+                    <p>Common types include:</p>
+                    <ul>
+                        <li><strong>Personal Computers (PCs):</strong> Desktops and laptops for everyday use.</li>
+                        <li><strong>Servers:</strong> Powerful machines that "serve" data to other computers on a network.</li>
+                        <li><strong>Embedded Systems:</strong> Small computers hidden inside other devices, like cars and microwaves.</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    
+                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="A modern laptop on a desk">
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section" id="future">
+            <div class="container">
+                <h2>The Future is Now</h2>
+                <p>Artificial Intelligence, Quantum Computing, and the Internet of Things are not just concepts—they are actively shaping our next generation of technology. The journey of computation is just beginning.</p>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2025 Elegant Page Design. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechVerse. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
