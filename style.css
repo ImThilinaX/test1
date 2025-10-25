@@ -1,0 +1,294 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff; /* A modern blue */
+    --primary-dark: #0056b3;
+    --dark-color: #2c3e50;    /* Dark navy for text */
+    --light-color: #f4f7f6;   /* Light gray for backgrounds */
+    --white-color: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; text-align: center; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* --- About Section (Cards) --- */
+.about-section {
+    padding: 5rem 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--white-color);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    color: var(--primary-color);
+}
+
+/* --- Content Section --- */
+.content-section {
+    padding: 5rem 0;
+    background: var(--white-color);
+}
+
+.content-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-text h2 {
+    text-align: left;
+}
+
+.content-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+.content-text li {
+    margin-bottom: 0.5rem;
+}
+
+.content-image {
+    flex: 1;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background: var(--dark-color);
+    color: var(--white-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--white-color);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* --- Responsive Design (Media Queries) --- */
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .content-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+
+    /* Mobile Navigation */
+    .nav-links {
+        display: none; /* A real mobile menu would use JavaScript, but for CSS-only, you could stack them */
+        /* Uncomment the lines below for a simple stacked menu */
+        /*
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        */
+    }
+
+    header nav {
+        /* Uncomment for stacked menu */
+        /* flex-direction: column; */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        height: 70vh;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
